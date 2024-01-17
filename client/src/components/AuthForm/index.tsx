@@ -1,4 +1,3 @@
-// AuthForm.tsx
 import React from 'react';
 import {
     FormControl,
@@ -14,6 +13,7 @@ interface AuthFormProps {
     setEmail: React.Dispatch<React.SetStateAction<string>>;
     setPassword: React.Dispatch<React.SetStateAction<string>>;
     errors: string | React.ReactElement | null;
+    buttonString: string;
 }
 
 const AuthForm: React.FC<AuthFormProps> = ({
@@ -23,6 +23,7 @@ const AuthForm: React.FC<AuthFormProps> = ({
     setEmail,
     setPassword,
     errors,
+    buttonString,
 }) => {
     return (
         <form onSubmit={onSubmit}>
@@ -59,7 +60,7 @@ const AuthForm: React.FC<AuthFormProps> = ({
             ) : null}
 
             <Button mt={4} colorScheme="teal" type="submit">
-                Sign Up
+                {buttonString}
             </Button>
         </form>
     );

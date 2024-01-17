@@ -8,7 +8,7 @@ import { currentUserRouter } from '@Routes/currentUser';
 import { signinRouter } from '@Routes/signIn';
 import { signoutRouter } from '@Routes/signOut';
 import { signupRouter } from '@Routes/signUp';
-import { errorHandler } from '@Middlewares/error-handler';
+import { errorHandler } from '@g-tix/common';
 
 const app = express();
 

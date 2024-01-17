@@ -34,7 +34,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/api/hello.ts",
-    "src/hooks/use-request.ts"
   ],
   "exclude": [
     "node_modules"

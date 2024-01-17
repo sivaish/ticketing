@@ -6,12 +6,13 @@ import Container from '@/components/ui/container';
 import AuthForm from '@/components/AuthForm';
 import useRequest from '@/hooks/use-request';
 
-export default function Signup() {
+export default function Signin() {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [buttonString, setButtonString] = useState('Sign In')
   const { doRequest, errors } = useRequest({
-    url: '/api/users/signup',
+    url: '/api/users/signin',
     method: 'post',
     body: {
       email,
@@ -28,7 +29,7 @@ export default function Signup() {
   return (
     <Container>
       <h1>
-        <strong className='font-bold'>Sign Up</strong>
+        <strong className='font-bold'>Sign In</strong>
       </h1>
       <Container>
         <AuthForm
@@ -38,6 +39,7 @@ export default function Signup() {
           setEmail={setEmail}
           setPassword={setPassword}
           errors={errors}
+          buttonString={buttonString}
         />
       </Container>
     </Container>

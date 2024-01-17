@@ -6,10 +6,7 @@ manifests:
 build:
   local:
     push: false
-  # googleCloudBuild:
-  #   projectId: ticketing-dev-407323
   artifacts:
-    # - image: us.gcr.io/ticketing-dev-407323/auth
     - image: ithive/auth
       context: auth
       docker:
@@ -17,7 +14,7 @@ build:
       sync:
         manual:
           - dest: .
-            src: 'src/**/*.js'
+            src: src/**/*.js
     - image: ithive/client
       context: client
       docker:
@@ -25,4 +22,4 @@ build:
       sync:
         manual:
           - dest: .
-            src: 'src/**/*.js'
+            src: src/**/*.js

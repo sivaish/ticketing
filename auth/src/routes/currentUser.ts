@@ -1,7 +1,6 @@
 import express, { Request, Response } from 'express';
 
-import { currentUser } from '@Middlewares/current-user';
-import { requireAuth } from '@Middlewares/require-auth';
+import { currentUser } from '@g-tix/common';
 
 interface AuthenticatedRequest extends Request {
   currentUser?: { id: string; email: string };
@@ -12,7 +11,7 @@ const router = express.Router();
 router.get(
   '/api/users/currentuser',
   currentUser,
-  requireAuth,
+  // requireAuth,
   (req: AuthenticatedRequest, res: Response) => {
     res.send({ currentUser: req.currentUser || null });
   },

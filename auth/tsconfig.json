@@ -18,14 +18,8 @@
       "@Routes/*": [
         "src/routes/*"
       ],
-      "@Middlewares/*": [
-        "src/middlewares/*"
-      ],
       "@Models/*": [
         "src/models/*"
-      ],
-      "@Errors/*": [
-        "src/errors/*"
       ],
       "@Services/*": [
         "src/services/*"

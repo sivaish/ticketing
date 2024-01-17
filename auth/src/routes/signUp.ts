@@ -4,8 +4,8 @@ import jwt from 'jsonwebtoken';
 
 import { User } from '@Models/user';
 
-import { validateRequest } from '@Middlewares/validate-request';
-import { BadRequestError } from '@Errors/bad-request-error';
+import { validateRequest } from '@g-tix/common';
+import { BadRequestError } from '@g-tix/common';
 
 const router = express.Router();
 
